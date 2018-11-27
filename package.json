@@ -57,13 +57,13 @@
   "engines": {
     "node": ">=4.2.1"
   },
-  "homepage": "https://github.io/tiberiuzuld/angular-auto-save-form",
+  "homepage": "https://github.io/stodolos/angular-auto-save-form",
   "bugs": {
-    "url": "https://github.com/tiberiuzuld/angular-auto-save-form/issues"
+    "url": "https://github.com/stodolos/angular-auto-save-form/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiberiuzuld/angular-auto-save-form.git"
+    "url": "https://github.com/stodolos/angular-auto-save-form.git"
   },
   "description": "Angular auto save form changed inputs",
   "keywords": [
