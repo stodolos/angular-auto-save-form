@@ -1,6 +1,6 @@
 {
-  "name": "angular-auto-save-form",
-  "version": "1.5.1",
+  "name": "angular-auto-save-form-stodolos",
+  "version": "1.6.0",
   "main": "index.js",
   "dependencies": {
     "angular": ">=1.6.x",
@@ -42,7 +42,7 @@
     "karma-jasmine": "1.1.0",
     "karma-ng-html2js-preprocessor": "1.0.0",
     "karma-phantomjs-launcher": "1.0.4",
-    "lodash": "4.17.4",
+    "lodash": "~4.17",
     "main-bower-files": "2.13.1",
     "phantomjs-prebuilt": "2.1.14",
     "uglify-save-license": "0.4.1",
