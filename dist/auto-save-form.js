@@ -9,9 +9,9 @@
 
   autoSaveForm.$inject = ["$parse", "autoSaveForm", "$log"];
   angular.module('angular-auto-save-form', [])
-         .provider('autoSaveForm', autoSaveFormProvider)
-         .directive('autoSaveForm', autoSaveForm)
-         .directive('autoSaveFormProperty', autoSaveFormProperty);
+    .provider('autoSaveForm', autoSaveFormProvider)
+    .directive('autoSaveForm', autoSaveForm)
+    .directive('autoSaveFormProperty', autoSaveFormProperty);
 
   /** @ngInject */
   function autoSaveFormProvider() {
@@ -49,7 +49,7 @@
           spinnerPosition: spinnerPosition
         };
       }
-    }
+    };
   }
 
   /** @ngInject */
@@ -132,7 +132,15 @@
         }
 
         function cycleForm(formModel) {
-          angular.forEach(formModel.$$controls, checkForm);
+          if (formModel.$$controls) {
+            angular.forEach(formModel.$$controls, checkForm);
+          } else {
+            angular.forEach(formModel, function (x) {
+              if (typeof x === 'object' && x.hasOwnProperty('$modelValue')) {
+                checkForm(x);
+              }
+            });
+          }
         }
 
         function checkForm(value) {
